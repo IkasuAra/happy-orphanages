@@ -1,0 +1,35 @@
+/*animação*/
+@keyframes up {
+  from {
+    /*início*/
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    /*fim*/
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  animation-name: up;
+  animation-duration: 300ms;
+  animation-fill-mode: backwards;
+  /* deixa o objeto no último elemento aplicado */
+}
+
+.animate-right {
+  animation-name:right;
+  animation-duration: 300ms;
+}

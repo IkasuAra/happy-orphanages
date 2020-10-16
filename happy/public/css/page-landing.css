@@ -1,0 +1,124 @@
+/* display flex deixa cada elemento dentro alinhado uma ao lado da outra */
+
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Dar um espaçamento entre os elementos*/
+
+#container {
+  margin: auto;
+  width: min(90%, 112rem);
+  /* espaço lateral
+  aplica minimo entre 90% e 112rem  */
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+/* atraso */
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(4vw, 8vw, 8.4rem);
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background: #ffd666;
+  border: none;
+  border-radius: 3rem;
+  /* arredondar borda */
+  display: flex;
+  align-items: center;
+  /* alinha o objeto na vertical para o "eixo x"*/
+  justify-content: center;
+  /* alinha o objeto na horizontal para o "eixo y"*/
+  margin: auto;
+  animation-delay: 250ms;
+
+  /*tempo de transição da cor do botão*/
+  transition: background 200ms;
+}
+
+/*animar o botão - procurar no visist o item 'a' no estado hover (maouse em cima)*/
+
+.visit a:hover{
+  background: #96feff;
+}
+
+/*Desktop Version*/
+@media (min-width: 760px){
+  #container{
+    padding: 5rem 2rem;
+    /*shorthand background:image repeat position (X,Y) / size */
+    background: url(../images/bg.svg) no-repeat 80% / clamp(30rem, 54vw, 56rem);
+  }
+
+  header{
+    display: flex;
+    align-items: center;
+    /*coloca um espaço entre eles*/
+    justify-content: space-between;
+  }
+
+/*resetar os valores configurados anteiormente*/
+  .location, h1, .visit p{
+    height: initial;
+    text-align: initial;
+  }
+
+  .location{
+    text-align: right;
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  main h1{
+    /*proporcional a largura da tela - fornecer limites clamp(min, ideal, max)
+    
+    min(1,2) : entre 1 e 2 */
+
+    font-weight: bold;
+    line-height: 0.88;
+
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+    /*espaçamento relógio*/
+
+    width: min(300px, 80%);
+  }
+
+  .visit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+
+  .visit a{
+    margin: initial;
+  }
+}

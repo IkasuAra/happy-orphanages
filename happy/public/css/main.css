@@ -1,0 +1,47 @@
+/* #: referência ao elemento id (especificidade) contido no html
+
+Layout responsivo é um layout adaptativo
+
+vh : altura dos pedaços fatiado da tela (ocupar a tela)
+
+margin: espaçamento
+
+*{
+    Seletor universal
+}
+
+1em = 16px buscando no elemento anterior
+
+rem : busca no elemento pai (root element)
+
+: root : seletor raiz
+
+rem reflete no root
+
+100% = 16px
+
+.classe elemento : buscar na classe o elemento
+
+no css um elemento reflete ao outro
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: white;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1.8rem/1 "Nunito", sans-serif;
+}
